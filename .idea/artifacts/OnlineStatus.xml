@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="OnlineStatus">
+    <output-path>$PROJECT_DIR$/out/artifacts/OnlineStatus</output-path>
+    <root id="archive" name="OnlineStatus.jar">
+      <element id="module-output" name="OnlineStatus" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
