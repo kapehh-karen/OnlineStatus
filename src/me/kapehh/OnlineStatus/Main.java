@@ -56,7 +56,7 @@ public class Main extends JavaPlugin {
             );
 
             dbHelper.connect();
-            queueUpdater = new QueueUpdater(dbHelper);
+            queueUpdater = new QueueUpdater(this);
             queueUpdater.runTaskTimerAsynchronously(this, ConstantSystem.ticksPerSec, ConstantSystem.ticksPerSec * 2 /* 2 seconds */);
             mainListener.setQueueUpdater(queueUpdater);
             getLogger().info("Success connect to MySQL!");
@@ -107,5 +107,8 @@ public class Main extends JavaPlugin {
 
     public PluginDatabase getDbHelper() {
         return dbHelper;
+    }
+    public PluginDatabaseInfo getDbInfo() {
+        return dbInfo;
     }
 }
